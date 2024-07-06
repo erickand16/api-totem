@@ -35,7 +35,7 @@ public class AvaliacaoController {
             query = "UPDATE avaliacao SET otimo = otimo + 1 WHERE id = :id";
         }
         var q = em.createNativeQuery(query);
-        q.setParameter("id", id);
+        q.setParameter("id", id); 
         var result = q.executeUpdate();
         System.out.println(result);
     }
